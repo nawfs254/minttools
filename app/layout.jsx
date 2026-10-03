@@ -45,7 +45,35 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-        {/* Google Analytics (GA4) */}
+                {/* Schema.org Structured Data for Google Brand Indexing */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://minttools.net/#website',
+                  'url': 'https://minttools.net',
+                  'name': 'MintTools',
+                  'alternateName': ['Mint Tools', 'MintTools Suite'],
+                  'description': '100% Free & Privacy-First Web Tools Suite: PDF Editor, Compressor, Merge & Split, Barcode & QR Studio, Image Tools, and Developer Converters. Zero uploads.',
+                  'inLanguage': 'en-US'
+                },
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://minttools.net/#organization',
+                  'name': 'MintTools',
+                  'url': 'https://minttools.net',
+                  'logo': 'https://minttools.net/icon.svg'
+                }
+              ]
+            })
+          }}
+        />
+
+{/* Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W6ENT3WEDE"
           strategy="afterInteractive"
