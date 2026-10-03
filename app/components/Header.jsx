@@ -29,11 +29,7 @@ export default function Header() {
     <header className="app-header">
       <Link href="/" className="brand-section" style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="logo-badge" title="MintTools Home">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 22, height: 22 }}>
-            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            <polyline points="2 17 12 22 22 17"></polyline>
-            <polyline points="2 12 12 17 22 12"></polyline>
-          </svg>
+          <img src="/logo.png" alt="MintTools Logo" className="brand-logo-img" />
         </div>
         <h1 className="brand-title">MintTools</h1>
       </Link>

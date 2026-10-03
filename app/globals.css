@@ -111,13 +111,27 @@ body {
 .logo-badge {
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
-  border-radius: var(--radius-md);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  box-shadow: 0 0 18px var(--primary-glow);
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.45);
+  background: #000000;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.logo-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.7);
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .brand-title {
@@ -2228,13 +2242,20 @@ html, body {
 .loader-inner-badge {
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  box-shadow: 0 4px 16px var(--primary-glow);
+  background: #000000;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
+}
+
+.loader-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .workspace-loader-title {
