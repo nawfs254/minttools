@@ -116,13 +116,29 @@ export default function ImageStudio({ showToast }) {
         <div className="tool-card">
           <div className="form-group">
             <label className="form-label">Select Image</label>
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              accept="image/*"
-              className="form-input"
-            />
+            <div
+              className="file-upload-dropzone"
+              onClick={() => fileInputRef.current?.click()}
+              role="button"
+              tabIndex={0}
+            >
+              <Upload size={24} style={{ color: 'var(--primary)' }} />
+              <div style={{ textAlign: 'center' }}>
+                <strong style={{ display: 'block', fontSize: '0.875rem' }}>
+                  {originalFile ? originalFile.name : 'Tap to select or drop an image'}
+                </strong>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                  {originalFile ? `${origSizeKB} KB • Ready` : 'Supports WebP, PNG, JPEG, GIF'}
+                </span>
+              </div>
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleFileChange}
+                accept="image/*"
+                style={{ display: 'none' }}
+              />
+            </div>
           </div>
 
           <div className="form-group">
@@ -187,20 +203,20 @@ export default function ImageStudio({ showToast }) {
           </button>
         </div>
 
-        <div className="tool-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '340px' }}>
+        <div className="tool-card image-preview-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '340px' }}>
           {previewUrl ? (
             <>
               <img
                 src={previewUrl}
                 alt="Preview"
-                style={{ maxWidth: '100%', maxHeight: '280px', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)' }}
+                style={{ maxWidth: '100%', height: 'auto', maxHeight: '280px', objectFit: 'contain', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)' }}
               />
-              <div style={{ marginTop: '1rem', fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-                <strong>Original:</strong> {origSizeKB} KB &nbsp;•&nbsp;
-                <strong>Output:</strong> {newSizeKB} KB &nbsp;•&nbsp;
-                <span style={{ color: pctChange < 0 ? 'var(--accent-emerald)' : 'var(--accent-amber)' }}>
-                  <strong>{pctChange < 0 ? `${pctChange}%` : `+${pctChange}%`}</strong>
-                </span>
+              <div className="image-stats-pill-row">
+                <div className="image-stat-badge"><span>Original:</span> <strong>{origSizeKB} KB</strong></div>
+                <div className="image-stat-badge"><span>Output:</span> <strong>{newSizeKB} KB</strong></div>
+                <div className="image-stat-badge" style={{ color: pctChange < 0 ? 'var(--accent-emerald)' : 'var(--accent-amber)' }}>
+                  <span>Result:</span> <strong>{pctChange < 0 ? `${pctChange}%` : `+${pctChange}%`}</strong>
+                </div>
               </div>
             </>
           ) : (

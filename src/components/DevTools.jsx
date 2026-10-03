@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React, { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
@@ -105,7 +105,7 @@ export default function DevTools({ showToast }) {
         <p className="tool-subhead">JSON formatting, Base64 & hash utilities</p>
       </div>
 
-      <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' }}>
+      <div className="tool-subtabs-nav">
         <button
           className={`tool-btn ${activeSubtab === 'json' ? 'active' : ''}`}
           onClick={() => setActiveSubtab('json')}
@@ -154,7 +154,7 @@ export default function DevTools({ showToast }) {
                 placeholder="Paste unformatted JSON here..."
               />
             </div>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
               <button className="tool-btn btn-primary" onClick={() => formatJson(2)}>Format (2 Spaces)</button>
               <button className="tool-btn" onClick={minifyJson}>Minify</button>
               <button className="tool-btn" onClick={() => { setJsonInput(''); setJsonOutput(''); setJsonStatus(null); }}>Clear</button>
@@ -199,7 +199,7 @@ export default function DevTools({ showToast }) {
                 placeholder="Type text to encode..."
               />
             </div>
-            <button className="tool-btn btn-primary" onClick={encodeB64}>Encode to Base64 →</button>
+            <button className="tool-btn btn-primary" onClick={encodeB64} style={{ width: "100%", justifyContent: "center" }}>Encode to Base64 →</button>
           </div>
 
           <div className="tool-card">
@@ -212,7 +212,7 @@ export default function DevTools({ showToast }) {
                 placeholder="Paste Base64 to decode..."
               />
             </div>
-            <button className="tool-btn btn-primary" onClick={decodeB64}>← Decode to Plain Text</button>
+            <button className="tool-btn btn-primary" onClick={decodeB64} style={{ width: "100%", justifyContent: "center" }}>← Decode to Plain Text</button>
           </div>
         </div>
       )}
@@ -231,18 +231,56 @@ export default function DevTools({ showToast }) {
             />
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            <div className="form-group">
-              <label className="form-label">SHA-256 (Hex)</label>
-              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem' }} value={sha256} readOnly />
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <div className="form-group" style={{ margin: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                <label className="form-label" style={{ margin: 0 }}>SHA-256 (Hex)</label>
+                {sha256 && (
+                  <button
+                    className="tool-btn"
+                    onClick={() => copyToClipboard(sha256)}
+                    style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem' }}
+                  >
+                    <Copy size={12} />
+                    <span>Copy</span>
+                  </button>
+                )}
+              </div>
+              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem', width: '100%', minWidth: 0 }} value={sha256} readOnly />
             </div>
-            <div className="form-group">
-              <label className="form-label">SHA-512 (Hex)</label>
-              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem' }} value={sha512} readOnly />
+
+            <div className="form-group" style={{ margin: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                <label className="form-label" style={{ margin: 0 }}>SHA-512 (Hex)</label>
+                {sha512 && (
+                  <button
+                    className="tool-btn"
+                    onClick={() => copyToClipboard(sha512)}
+                    style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem' }}
+                  >
+                    <Copy size={12} />
+                    <span>Copy</span>
+                  </button>
+                )}
+              </div>
+              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem', width: '100%', minWidth: 0 }} value={sha512} readOnly />
             </div>
-            <div className="form-group">
-              <label className="form-label">SHA-1 (Hex)</label>
-              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem' }} value={sha1} readOnly />
+
+            <div className="form-group" style={{ margin: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                <label className="form-label" style={{ margin: 0 }}>SHA-1 (Hex)</label>
+                {sha1 && (
+                  <button
+                    className="tool-btn"
+                    onClick={() => copyToClipboard(sha1)}
+                    style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem' }}
+                  >
+                    <Copy size={12} />
+                    <span>Copy</span>
+                  </button>
+                )}
+              </div>
+              <input type="text" className="form-input" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8125rem', width: '100%', minWidth: 0 }} value={sha1} readOnly />
             </div>
           </div>
         </div>
@@ -261,7 +299,7 @@ export default function DevTools({ showToast }) {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '1rem' }}>
+          <div className="stats-grid-counter">
             <div className="tool-card" style={{ textAlign: 'center', background: 'var(--bg-surface-raised)' }}>
               <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary)' }}>{words}</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Words</div>

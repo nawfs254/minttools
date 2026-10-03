@@ -133,7 +133,7 @@ export default function DevConverter({ showToast, onBackToDashboard }) {
     <div className="tool-view-wrapper">
       {/* Top Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
-        <div style={{ display: 'flex', gap: '0.4rem', background: 'var(--bg-surface)', padding: '0.3rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)', flexWrap: 'wrap' }}>
+        <div className="tool-subtabs-nav" style={{ background: 'var(--bg-surface)', padding: '0.3rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)', marginBottom: 0 }}>
           <button
             className={`tool-btn ${activeTab === 'data' ? 'active' : ''}`}
             onClick={() => setActiveTab('data')}
@@ -205,19 +205,10 @@ export default function DevConverter({ showToast, onBackToDashboard }) {
             {getDataConversions().map((item, idx) => (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  background: 'var(--bg-surface-raised)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-sm)',
-                  padding: '0.55rem 0.85rem',
-                  fontSize: '0.85rem'
-                }}
+                className="conversion-row"
               >
                 <span style={{ color: 'var(--text-muted)' }}>{item.unit}</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="conversion-val-wrap">
                   <strong>{item.val}</strong>
                   <button className="btn-icon" style={{ width: '22px', height: '22px' }} onClick={() => copyVal(item.val, `data_${idx}`)}>
                     {copiedKey === `data_${idx}` ? <Check size={12} color="var(--accent-emerald)" /> : <Copy size={12} />}
@@ -268,19 +259,10 @@ export default function DevConverter({ showToast, onBackToDashboard }) {
             {getCssConversions().map((item, idx) => (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  background: 'var(--bg-surface-raised)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-sm)',
-                  padding: '0.55rem 0.85rem',
-                  fontSize: '0.85rem'
-                }}
+                className="conversion-row"
               >
                 <span style={{ color: 'var(--text-muted)' }}>{item.unit}</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="conversion-val-wrap">
                   <strong>{item.val}</strong>
                   <button className="btn-icon" style={{ width: '22px', height: '22px' }} onClick={() => copyVal(item.val, `css_${idx}`)}>
                     {copiedKey === `css_${idx}` ? <Check size={12} color="var(--accent-emerald)" /> : <Copy size={12} />}
@@ -316,19 +298,10 @@ export default function DevConverter({ showToast, onBackToDashboard }) {
             {getColorConversions().map((item, idx) => (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  background: 'var(--bg-surface-raised)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-sm)',
-                  padding: '0.55rem 0.85rem',
-                  fontSize: '0.85rem'
-                }}
+                className="conversion-row"
               >
                 <span style={{ color: 'var(--text-muted)' }}>{item.label}</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="conversion-val-wrap">
                   <strong style={{ fontFamily: 'monospace' }}>{item.val}</strong>
                   <button className="btn-icon" style={{ width: '22px', height: '22px' }} onClick={() => copyVal(item.val, `color_${idx}`)}>
                     {copiedKey === `color_${idx}` ? <Check size={12} color="var(--accent-emerald)" /> : <Copy size={12} />}
@@ -369,19 +342,10 @@ export default function DevConverter({ showToast, onBackToDashboard }) {
             {getDateFromEpoch().map((item, idx) => (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  background: 'var(--bg-surface-raised)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-sm)',
-                  padding: '0.55rem 0.85rem',
-                  fontSize: '0.85rem'
-                }}
+                className="conversion-row"
               >
                 <span style={{ color: 'var(--text-muted)' }}>{item.label}</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="conversion-val-wrap">
                   <strong>{item.val}</strong>
                   <button className="btn-icon" style={{ width: '22px', height: '22px' }} onClick={() => copyVal(item.val, `time_${idx}`)}>
                     {copiedKey === `time_${idx}` ? <Check size={12} color="var(--accent-emerald)" /> : <Copy size={12} />}
