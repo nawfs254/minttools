@@ -70,13 +70,33 @@ export default function PrivacyPage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: '2rem' }}>
+            <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '1.5rem 0 0.8rem', color: 'var(--text-main)' }}>
           4. Contact Us
         </h2>
         <p>
-          If you have any questions or feedback regarding this Privacy Policy or the security of MintTools, feel free to contact us through our official project channels.
+          If you have any questions or feedback regarding this Privacy Policy, security, or feature requests, feel free to reach out to us:
         </p>
+        <ul style={{ marginTop: '0.75rem', paddingLeft: '1.5rem', lineHeight: '2' }}>
+          <li>
+            <strong>Email:</strong>{' '}
+            <a href="mailto:hello@minttools.net" style={{ color: 'var(--accent-emerald)', textDecoration: 'none' }}>
+              hello@minttools.net
+            </a>
+          </li>
+          <li>
+            <strong>Facebook:</strong>{' '}
+            <a href="https://web.facebook.com/mint.tools.26/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-emerald)', textDecoration: 'none' }}>
+              web.facebook.com/mint.tools.26
+            </a>
+          </li>
+          <li>
+            <strong>Instagram:</strong>{' '}
+            <a href="https://www.instagram.com/mint.tools.26/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-emerald)', textDecoration: 'none' }}>
+              @mint.tools.26
+            </a>
+          </li>
+        </ul>
       </section>
     </div>
   );
