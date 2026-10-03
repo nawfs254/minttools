@@ -1,3 +1,10 @@
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#0a0d14',
+};
+
 import './globals.css';
 import Script from 'next/script';
 import Link from 'next/link';

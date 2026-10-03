@@ -47,7 +47,7 @@ export default function Header() {
             style={{ textDecoration: 'none', background: 'rgba(255,255,255,0.06)', borderRadius: 'var(--radius-sm)' }}
           >
             <LayoutGrid size={15} />
-            <span>All Tools</span>
+            <span className="all-tools-label">All Tools</span>
           </Link>
         )}
 

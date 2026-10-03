@@ -124,7 +124,7 @@ export default function ImageStudio({ showToast }) {
             >
               <Upload size={24} style={{ color: 'var(--primary)' }} />
               <div style={{ textAlign: 'center' }}>
-                <strong style={{ display: 'block', fontSize: '0.875rem' }}>
+                <strong style={{ display: 'block', fontSize: '0.85rem', wordBreak: 'break-word', overflowWrap: 'anywhere' }}>
                   {originalFile ? originalFile.name : 'Tap to select or drop an image'}
                 </strong>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -171,23 +171,25 @@ export default function ImageStudio({ showToast }) {
             </div>
           )}
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-            <div className="form-group">
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '0.65rem', width: '100%' }}>
+            <div className="form-group" style={{ minWidth: 0, margin: 0 }}>
               <label className="form-label">Width (px)</label>
               <input
                 type="number"
                 value={targetWidth}
                 onChange={(e) => handleWidthChange(e.target.value)}
                 className="form-input"
+                style={{ width: '100%', minWidth: 0 }}
               />
             </div>
-            <div className="form-group">
+            <div className="form-group" style={{ minWidth: 0, margin: 0 }}>
               <label className="form-label">Height (px)</label>
               <input
                 type="number"
                 value={targetHeight}
                 onChange={(e) => handleHeightChange(e.target.value)}
                 className="form-input"
+                style={{ width: '100%', minWidth: 0 }}
               />
             </div>
           </div>
@@ -196,14 +198,14 @@ export default function ImageStudio({ showToast }) {
             className="tool-btn btn-primary"
             onClick={handleDownload}
             disabled={!processedBlob}
-            style={{ width: '100%', justifyContent: 'center', padding: '0.75rem', marginTop: '0.5rem' }}
+            style={{ width: '100%', justifyContent: 'center', padding: '0.75rem', marginTop: '0.75rem', whiteSpace: 'normal', textAlign: 'center' }}
           >
             <Download size={16} />
             <span>Download Processed Image</span>
           </button>
         </div>
 
-        <div className="tool-card image-preview-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '340px' }}>
+        <div className="tool-card image-preview-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           {previewUrl ? (
             <>
               <img

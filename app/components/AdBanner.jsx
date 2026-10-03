@@ -26,13 +26,13 @@ export default function AdBanner({
       className={`ad-container-wrapper ${isRectangle ? 'ad-rectangle' : 'ad-horizontal'} ${className}`}
       style={{
         margin: '1.5rem auto',
-        maxWidth: isRectangle ? '336px' : '768px',
+        maxWidth: isRectangle ? 'min(336px, 100%)' : 'min(768px, 100%)',
         width: '100%',
         textAlign: 'center',
         position: 'relative'
       }}
     >
-      <div className="ad-inner-box">
+      <div className="ad-inner-box" style={{ maxWidth: '100%', overflow: 'hidden' }}>
         <span className="ad-badge-label">Advertisement</span>
 
         {/* Google AdSense Display Unit: MintTools Bottom */}

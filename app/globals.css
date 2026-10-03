@@ -1784,3 +1784,104 @@ html, body {
     padding: 1rem !important;
   }
 }
+
+
+/* =========================================================
+   Ultra-Compact & Defensive Mobile Fixes (320px - 480px)
+   ========================================================= */
+
+/* Ensure CSS Grid tracks shrink defensively */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.two-col-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .two-col-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem;
+  }
+}
+
+/* Ensure inputs never exceed container width */
+.form-input,
+.form-textarea,
+.form-select,
+.tool-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Header adaptation for narrow mobile screens */
+@media (max-width: 420px) {
+  .all-tools-label {
+    display: none;
+  }
+  .app-header {
+    padding: 0.5rem 0.75rem;
+  }
+  .brand-title {
+    font-size: 1.05rem;
+  }
+  .logo-badge {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Screen sizes <= 380px (e.g., iPhone SE, Galaxy Fold, 320px responsive) */
+@media (max-width: 380px) {
+  .tool-view-wrapper {
+    margin: 0.65rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .tool-card {
+    padding: 0.95rem 0.65rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .tool-headline {
+    font-size: 1.25rem;
+  }
+
+  .tool-subhead {
+    font-size: 0.8rem;
+  }
+
+  .file-upload-dropzone {
+    padding: 1rem 0.5rem;
+  }
+
+  .image-stat-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .btn-primary {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.5rem;
+  }
+}
+
+/* Image preview card responsive sizing */
+.image-preview-card {
+  min-height: 280px;
+}
+
+@media (max-width: 640px) {
+  .image-preview-card {
+    min-height: 180px;
+  }
+}
