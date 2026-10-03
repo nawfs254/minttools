@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://minttools.net';
+  const baseUrl = 'https://www.minttools.net';
   const routes = [
     '',
     '/pdf',

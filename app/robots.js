@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://minttools.net/sitemap.xml',
+    sitemap: 'https://www.minttools.net/sitemap.xml',
   };
 }

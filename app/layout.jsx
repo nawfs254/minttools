@@ -13,7 +13,7 @@ import AdBanner from './components/AdBanner';
 import { ToastProvider } from './components/ToastProvider';
 
 export const metadata = {
-  metadataBase: new URL('https://minttools.net'),
+  metadataBase: new URL('https://www.minttools.net'),
   title: {
     default: 'MintTools — 100% Free & Privacy-First Web Tools Suite',
     template: '%s | MintTools'
@@ -54,8 +54,8 @@ export default function RootLayout({ children }) {
               '@graph': [
                 {
                   '@type': 'WebSite',
-                  '@id': 'https://minttools.net/#website',
-                  'url': 'https://minttools.net',
+                  '@id': 'https://www.minttools.net/#website',
+                  'url': 'https://www.minttools.net',
                   'name': 'MintTools',
                   'alternateName': ['Mint Tools', 'MintTools Suite'],
                   'description': '100% Free & Privacy-First Web Tools Suite: PDF Editor, Compressor, Merge & Split, Barcode & QR Studio, Image Tools, and Developer Converters. Zero uploads.',
@@ -63,10 +63,10 @@ export default function RootLayout({ children }) {
                 },
                 {
                   '@type': 'Organization',
-                  '@id': 'https://minttools.net/#organization',
+                  '@id': 'https://www.minttools.net/#organization',
                   'name': 'MintTools',
-                  'url': 'https://minttools.net',
-                  'logo': 'https://minttools.net/icon.svg'
+                  'url': 'https://www.minttools.net',
+                  'logo': 'https://www.minttools.net/icon.svg'
                 }
               ]
             })
