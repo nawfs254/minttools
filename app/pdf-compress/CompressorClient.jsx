@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const PDFCompressor = dynamic(() => import('@/src/components/PDFCompressor'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading PDF Compressor...</div>
+  loading: () => <WorkspaceLoader title="PDF Compressor" />
 });
 
 export default function CompressorClient() {

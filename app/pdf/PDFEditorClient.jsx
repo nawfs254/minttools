@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const PDFEditor = dynamic(() => import('@/src/components/PDFEditor'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading PDF Editor...</div>
+  loading: () => <WorkspaceLoader title="PDF Editor" />
 });
 
 export default function PDFEditorClient() {

@@ -9,6 +9,7 @@ import './globals.css';
 import Script from 'next/script';
 import Link from 'next/link';
 import Header from './components/Header';
+import TopLoader from './components/TopLoader';
 import AdBanner from './components/AdBanner';
 import { ToastProvider } from './components/ToastProvider';
 
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ToastProvider>
+        <TopLoader />
           <Header />
           <main className="app-main">
             {children}

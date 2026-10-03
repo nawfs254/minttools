@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import {
+﻿'use client';
+import React, { useState } from 'react';
+import { Loader2,
   FileText,
   FileDown,
   Layers,
@@ -18,6 +18,12 @@ import {
 } from 'lucide-react';
 
 export default function HomeDashboard({ onSelectTool }) {
+  const [navigatingId, setNavigatingId] = useState(null);
+
+  const handleToolClick = (toolId) => {
+    setNavigatingId(toolId);
+    onSelectTool(toolId);
+  };
   const tools = [
     {
       id: 'pdf',
@@ -145,8 +151,8 @@ export default function HomeDashboard({ onSelectTool }) {
             return (
               <div
                 key={tool.id}
-                className="tool-small-box"
-                onClick={() => onSelectTool(tool.id)}
+                className={`tool-small-box ${navigatingId === tool.id ? 'is-navigating' : ''}`}
+                onClick={() => handleToolClick(tool.id)}
                 style={{ '--box-glow': tool.glow }}
                 role="button"
                 tabIndex={0}
@@ -162,7 +168,11 @@ export default function HomeDashboard({ onSelectTool }) {
                   <p className="small-box-tagline">{tool.desc}</p>
                 </div>
                 <div className="small-box-arrow">
-                  <ArrowRight size={15} />
+                  {navigatingId === tool.id ? (
+                    <Loader2 size={16} className="tool-spin-icon" />
+                  ) : (
+                    <ArrowRight size={15} />
+                  )}
                 </div>
               </div>
             );

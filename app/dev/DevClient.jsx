@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const DevTools = dynamic(() => import('@/src/components/DevTools'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading Dev Tools...</div>
+  loading: () => <WorkspaceLoader title="Dev & Text Utilities" />
 });
 
 export default function DevClient() {

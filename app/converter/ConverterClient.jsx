@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const DevConverter = dynamic(() => import('@/src/components/DevConverter'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading Dev Converter...</div>
+  loading: () => <WorkspaceLoader title="Developer Converter" />
 });
 
 export default function ConverterClient() {

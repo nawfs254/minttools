@@ -2128,3 +2128,179 @@ html, body {
     font-size: 0.785rem;
   }
 }
+
+
+/* =========================================================
+   Interactive Navigation Loaders & Opening Screen
+   ========================================================= */
+
+/* Top Progress Bar */
+.top-progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.top-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent-cyan), var(--accent-emerald));
+  box-shadow: 0 0 10px var(--primary), 0 0 5px var(--accent-cyan);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Tool box clicked loading state */
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tool-spin-icon {
+  animation: spinClockwise 0.8s linear infinite;
+  color: var(--primary) !important;
+}
+
+.tool-small-box.is-navigating {
+  border-color: var(--primary) !important;
+  background: var(--bg-surface-raised) !important;
+  box-shadow: 0 0 20px var(--primary-glow) !important;
+  transform: translateY(-2px);
+  pointer-events: none;
+}
+
+.tool-small-box.is-navigating .small-box-title {
+  color: var(--primary);
+}
+
+/* Workspace Opening Screen */
+.workspace-loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.workspace-loader-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(99, 102, 241, 0.15);
+  animation: popoverFadeIn 0.25s ease-out;
+}
+
+.loader-logo-ring {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+}
+
+.loader-ring-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--primary);
+  border-right-color: var(--accent-cyan);
+  animation: spinClockwise 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.loader-inner-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.workspace-loader-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+  color: var(--text-main);
+}
+
+.workspace-loader-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.workspace-loader-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.loader-pill-icon {
+  flex-shrink: 0;
+}
+
+/* Shimmer pulse bar */
+@keyframes shimmerPulse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.workspace-skeleton-shimmer {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.workspace-skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--accent-cyan), transparent);
+  animation: shimmerPulse 1.4s ease-in-out infinite;
+}
+
+@media (max-width: 480px) {
+  .workspace-loader-card {
+    padding: 2rem 1.25rem;
+  }
+  .workspace-loader-title {
+    font-size: 1.1rem;
+  }
+}

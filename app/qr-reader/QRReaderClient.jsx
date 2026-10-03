@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const QRReader = dynamic(() => import('@/src/components/QRReader'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading QR Reader...</div>
+  loading: () => <WorkspaceLoader title="QR Code Reader" />
 });
 
 export default function QRReaderClient() {

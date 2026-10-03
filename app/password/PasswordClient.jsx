@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const PasswordGenerator = dynamic(() => import('@/src/components/PasswordGenerator'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading Password Generator...</div>
+  loading: () => <WorkspaceLoader title="Password Generator" />
 });
 
 export default function PasswordClient() {

@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const PDFMergeSplit = dynamic(() => import('@/src/components/PDFMergeSplit'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading PDF Merge & Split...</div>
+  loading: () => <WorkspaceLoader title="PDF Merge & Split" />
 });
 
 export default function MergeSplitClient() {

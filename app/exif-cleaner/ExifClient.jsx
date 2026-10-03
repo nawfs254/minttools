@@ -2,10 +2,11 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/app/components/ToastProvider';
+import WorkspaceLoader from '@/app/components/WorkspaceLoader';
 
 const ExifCleaner = dynamic(() => import('@/src/components/ExifCleaner'), {
   ssr: false,
-  loading: () => <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Loading EXIF Cleaner...</div>
+  loading: () => <WorkspaceLoader title="EXIF Metadata Cleaner" />
 });
 
 export default function ExifClient() {
