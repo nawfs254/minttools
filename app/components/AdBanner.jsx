@@ -2,19 +2,19 @@
 import React, { useEffect, useRef } from 'react';
 
 export default function AdBanner({
-  slotId = '',
-  format = 'horizontal', // 'horizontal' (728x90/responsive) or 'rectangle' (300x250)
+  slotId = '3065498609',
+  format = 'horizontal',
   className = ''
 }) {
   const adRef = useRef(null);
-  const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || '';
+  const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-9295840636296759';
 
   useEffect(() => {
     if (clientId && slotId && typeof window !== 'undefined') {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {
-        console.warn('AdSense notice:', e);
+        // Ads will render when Google completes domain approval
       }
     }
   }, [clientId, slotId]);
@@ -35,23 +35,16 @@ export default function AdBanner({
       <div className="ad-inner-box">
         <span className="ad-badge-label">Advertisement</span>
 
-        {clientId && slotId ? (
-          <ins
-            ref={adRef}
-            className="adsbygoogle"
-            style={{ display: 'block' }}
-            data-ad-client={clientId}
-            data-ad-slot={slotId}
-            data-ad-format={isRectangle ? 'rectangle' : 'auto'}
-            data-full-width-responsive="true"
-          />
-        ) : (
-          <div className="ad-placeholder-frame">
-            <span className="ad-placeholder-text">
-              Display Ad Space {isRectangle ? '(300×250)' : '(728×90)'}
-            </span>
-          </div>
-        )}
+        {/* Google AdSense Display Unit: MintTools Bottom */}
+        <ins
+          ref={adRef}
+          className="adsbygoogle"
+          style={{ display: 'block', minHeight: '90px' }}
+          data-ad-client={clientId}
+          data-ad-slot={slotId}
+          data-ad-format={isRectangle ? 'rectangle' : 'auto'}
+          data-full-width-responsive="true"
+        />
       </div>
     </div>
   );

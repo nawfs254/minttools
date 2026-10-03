@@ -27,7 +27,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const adClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  const adClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-9295840636296759';
 
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
@@ -36,15 +36,13 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-        {/* Google AdSense Script (Loads cleanly after interactive without blocking page render) */}
-        {adClientId && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClientId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClientId}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body>
         <ToastProvider>
@@ -52,8 +50,8 @@ export default function RootLayout({ children }) {
           <main className="app-main">
             {children}
 
-            {/* Static in-page non-intrusive Ad Slot (Zero Popups) */}
-            <AdBanner slotId={process.env.NEXT_PUBLIC_ADSENSE_FOOTER_SLOT || ''} format="horizontal" />
+            {/* In-page Static Ad Slot (MintTools Bottom) */}
+            <AdBanner slotId="3065498609" format="horizontal" />
           </main>
 
           {/* Clean Minimal Footer */}

@@ -1,3 +1,1 @@
-# Google AdSense ads.txt for MintTools
-# Replace pub-0000000000000000 with your real Publisher ID from Google AdSense
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-9295840636296759, DIRECT, f08c47fec0942fa0
