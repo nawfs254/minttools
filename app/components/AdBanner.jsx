@@ -1,5 +1,6 @@
-'use client';
+﻿'use client';
 import React, { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function AdBanner({
   slotId = '3065498609',
@@ -7,17 +8,25 @@ export default function AdBanner({
   className = ''
 }) {
   const adRef = useRef(null);
+  const pathname = usePathname();
   const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-9295840636296759';
 
+  // Never serve ads on 404/not-found error screens (strict AdSense compliance)
+  const is404 = pathname === '/404' || pathname === '/_not-found';
+
   useEffect(() => {
-    if (clientId && slotId && typeof window !== 'undefined') {
+    if (!is404 && clientId && slotId && typeof window !== 'undefined') {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {
         // Ads will render when Google completes domain approval
       }
     }
-  }, [clientId, slotId]);
+  }, [clientId, slotId, is404]);
+
+  if (is404) {
+    return null;
+  }
 
   const isRectangle = format === 'rectangle';
 
