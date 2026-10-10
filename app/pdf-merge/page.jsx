@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online PDF Merge & Split – Combine & Extract Pages | MintTools',
-  description: 'Merge multiple PDF files into one clean document, or split and extract specific pages. 100% private, zero uploads, instant browser processing.',
-  keywords: ['merge pdf', 'split pdf', 'combine pdf files', 'extract pdf pages', 'pdf joiner', 'pdf separator', 'free pdf merger online'],
+  title: 'Best Online PDF Merge & Split — Combine or Extract PDF Pages Free | MintTools',
+  description: 'Merge multiple PDF files into one clean document or split and extract pages online for free. Drag-and-drop page reordering, zero server uploads, 100% private.',
+  keywords: [
+    'best pdf merger online',
+    'merge pdf free no limit',
+    'combine pdf files online',
+    'split pdf pages free',
+    'extract pages from pdf',
+    'pdf joiner online',
+    'free pdf separator',
+    'merge pdf no signup'
+  ],
   openGraph: {
-    title: 'Free Online PDF Merge & Split – Combine & Extract Pages | MintTools',
+    title: 'Best Online PDF Merge & Split — Combine or Extract PDF Pages Free | MintTools',
     description: 'Combine multiple PDF documents or split large PDF files into distinct chapters with zero server upload latency.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

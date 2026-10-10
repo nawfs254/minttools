@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Unit & Developer Converter – Data Sizes, CSS, Colors & Timestamps | MintTools',
-  description: 'Convert between digital data sizes (Bytes to TB), CSS units (PX to REM), color spaces (HEX, RGB, HSL), and Unix epoch timestamps in real-time. 100% free and private.',
-  keywords: ['unit converter', 'developer converter', 'px to rem converter', 'css units converter', 'hex to rgb', 'data size converter', 'unix timestamp converter'],
+  title: 'Best Free Unit & Developer Converter — CSS, Data, Colors & Timestamps | MintTools',
+  description: 'Convert between CSS units (PX to REM), digital storage sizes (Bytes to TB), color spaces (HEX, RGB, HSL), and Unix epoch timestamps in real time. 100% free.',
+  keywords: [
+    'best unit converter online',
+    'px to rem converter',
+    'css unit converter',
+    'hex to rgb converter',
+    'data size converter',
+    'unix timestamp converter online',
+    'free developer unit converter',
+    'rem to px calculator'
+  ],
   openGraph: {
-    title: 'Free Unit & Developer Converter – Data Sizes, CSS, Colors & Timestamps | MintTools',
+    title: 'Best Free Unit & Developer Converter — CSS, Data, Colors & Timestamps | MintTools',
     description: 'Instant multi-purpose developer converters for CSS rem/px, color codes, digital storage, and epoch timestamps.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

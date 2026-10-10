@@ -1,13 +1,22 @@
-import CompressorClient from './CompressorClient';
+﻿import CompressorClient from './CompressorClient';
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online PDF Compressor — Reduce PDF Size with Zero Uploads | MintTools',
-  description: 'Shrink large PDF documents directly on your device. Fast, secure, and 100% client-side with zero server uploads.',
-  keywords: ['compress pdf online free', 'reduce pdf size', 'compress pdf no upload', 'private pdf compressor', 'shrink pdf file'],
+  title: 'Best Online PDF Compressor — Reduce PDF File Size (100% Free & Private) | MintTools',
+  description: 'Compress and shrink PDF documents online for free without losing quality. 100% private in-browser compression with zero file uploads and no size limits.',
+  keywords: [
+    'best pdf compressor online',
+    'reduce pdf size free',
+    'compress pdf no limit',
+    'shrink pdf file online',
+    'private pdf compressor',
+    'lossless pdf compression',
+    'free online pdf compressor',
+    'compress pdf without upload'
+  ],
   openGraph: {
-    title: 'Free Online PDF Compressor — Reduce PDF Size with Zero Uploads | MintTools',
-    description: 'Shrink large PDF documents directly on your device with 100% client-side privacy.',
+    title: 'Best Online PDF Compressor — Reduce PDF File Size (100% Free & Private) | MintTools',
+    description: 'Compress and shrink PDF documents online for free without losing quality with 100% client-side privacy.',
     type: 'website'
   }
 };
@@ -62,3 +71,4 @@ export default function Page() {
     </>
   );
 }
+

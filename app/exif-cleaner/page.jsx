@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online EXIF Cleaner – Remove GPS, Camera & Photo Metadata | MintTools',
-  description: 'Inspect and remove sensitive EXIF metadata, GPS latitude/longitude, camera model, and timestamp from photos before sharing online. 100% private.',
-  keywords: ['exif cleaner', 'remove exif', 'remove gps from photo', 'strip metadata', 'photo privacy tool', 'clean photo metadata', 'delete exif data'],
+  title: 'Best Online EXIF Cleaner — Remove GPS Location & Photo Metadata Free | MintTools',
+  description: 'Remove sensitive GPS location coordinates, camera models, and timestamps from photos before sharing online. 100% private, client-side metadata scrubbing.',
+  keywords: [
+    'best exif cleaner online',
+    'remove gps from photo',
+    'strip photo metadata online',
+    'clean exif data free',
+    'photo privacy tool',
+    'delete exif metadata',
+    'remove location from picture',
+    'wipe camera metadata'
+  ],
   openGraph: {
-    title: 'Free Online EXIF Cleaner – Remove GPS, Camera & Photo Metadata | MintTools',
+    title: 'Best Online EXIF Cleaner — Remove GPS Location & Photo Metadata Free | MintTools',
     description: 'Protect your privacy by stripping hidden GPS coordinates, device serial numbers, and shooting dates from your photos.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

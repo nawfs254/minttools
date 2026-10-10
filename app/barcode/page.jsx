@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online Barcode Generator – Code 128, EAN-13, UPC, Code 39 | MintTools',
-  description: 'Generate high-resolution retail, inventory, and logistics barcodes in Code 128, EAN-13, UPC-A, and Code 39. 100% private, free vector SVG and PNG export.',
-  keywords: ['barcode generator', 'free barcode studio', 'create barcode online', 'code 128 generator', 'ean 13 generator', 'upc barcode generator', 'retail barcode maker'],
+  title: 'Best Online Barcode Generator — Code 128, EAN-13 & UPC (Free SVG & PNG) | MintTools',
+  description: 'Generate retail and inventory barcodes in Code 128, EAN-13, UPC-A, and Code 39. Free vector SVG and high-resolution PNG download with zero tracking.',
+  keywords: [
+    'best barcode generator online',
+    'free code 128 generator',
+    'ean 13 barcode maker',
+    'upc barcode generator',
+    'retail barcode studio',
+    'create barcode free',
+    'svg barcode generator',
+    'barcode label printer generator'
+  ],
   openGraph: {
-    title: 'Free Online Barcode Generator – Code 128, EAN-13, UPC, Code 39 | MintTools',
+    title: 'Best Online Barcode Generator — Code 128, EAN-13 & UPC (Free SVG & PNG) | MintTools',
     description: 'Create and download scannable barcodes in Code 128, EAN-13, UPC-A, and Code 39 with instant live preview and zero uploads.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

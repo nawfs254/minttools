@@ -1,12 +1,21 @@
-import ImageStudioClient from './ImageStudioClient';
+﻿import ImageStudioClient from './ImageStudioClient';
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online Image Studio — Compress, Resize & Convert | MintTools',
-  description: 'Compress image file sizes, resize dimensions, and convert between WebP, PNG, and JPG formats directly in your browser. Fast and private.',
-  keywords: ['image compressor online', 'image studio', 'resize image online', 'convert webp to png', 'convert png to jpg', 'photo optimizer browser'],
+  title: 'Best Free Online Image Editor & Compressor — Resize, Convert & Crop | MintTools',
+  description: 'Compress, convert, resize, and crop images directly in your browser. Convert between WebP, PNG, JPEG, and AVIF with instant preview and zero uploads.',
+  keywords: [
+    'best online image editor',
+    'best image compressor free',
+    'resize image online',
+    'convert image to webp',
+    'batch image compressor',
+    'private image optimizer',
+    'shrink image size free',
+    'crop image online free'
+  ],
   openGraph: {
-    title: 'Free Online Image Studio — Compress, Resize & Convert | MintTools',
+    title: 'Best Free Online Image Editor & Compressor — Resize, Convert & Crop | MintTools',
     description: 'Compress image file sizes, resize dimensions, and convert formats with zero server uploads.',
     type: 'website'
   }
@@ -23,7 +32,7 @@ const imgFeatures = [
   },
   {
     title: 'Instant Local Processing',
-    desc: 'Runs on your device GPU/CPU — eliminating upload and download wait times completely.'
+    desc: 'Runs on your device GPU/CPU â€” eliminating upload and download wait times completely.'
   }
 ];
 
@@ -62,3 +71,4 @@ export default function Page() {
     </>
   );
 }
+

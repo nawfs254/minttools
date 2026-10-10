@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Image to PDF Converter – Convert JPG, PNG & WebP to PDF | MintTools',
-  description: 'Convert JPG, PNG, and WebP pictures into clean multi-page PDF documents, or extract PDF pages to high-resolution images. 100% free with zero file uploads.',
-  keywords: ['image to pdf', 'jpg to pdf', 'png to pdf', 'convert photos to pdf', 'pdf to image', 'pdf to jpg', 'free image to pdf online'],
+  title: 'Best Image to PDF Converter Online — JPG & PNG to Multi-Page PDF | MintTools',
+  description: 'Convert JPG, PNG, and WebP images to clean multi-page PDF documents online for free. Custom margins, page orientation, and zero server uploads.',
+  keywords: [
+    'best image to pdf converter',
+    'jpg to pdf free',
+    'png to pdf converter online',
+    'photos to pdf no watermark',
+    'combine images into pdf',
+    'convert picture to pdf',
+    'pdf to image converter online',
+    'free image to pdf maker'
+  ],
   openGraph: {
-    title: 'Free Image to PDF Converter – Convert JPG, PNG & WebP to PDF | MintTools',
+    title: 'Best Image to PDF Converter Online — JPG & PNG to Multi-Page PDF | MintTools',
     description: 'Combine photos, scans, and receipts into organized PDF documents with customizable page margins and orientation.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

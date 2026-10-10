@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online Developer Utilities – JSON Formatter, Base64, Hashes & Diff | MintTools',
-  description: 'Format & minify JSON, encode/decode Base64 strings, generate SHA-256 and MD5 hashes, and inspect text diffs. 100% private with zero server leakage.',
-  keywords: ['developer tools', 'json formatter', 'json validator', 'base64 encoder', 'base64 decoder', 'sha256 hash generator', 'text diff checker', 'online dev utilities'],
+  title: 'Best Online Developer Tools — JSON Formatter, Base64, Hash & Diff | MintTools',
+  description: 'Essential browser developer utilities: format & minify JSON, encode/decode Base64, generate SHA-256 and MD5 hashes, and inspect text diffs. 100% private.',
+  keywords: [
+    'best online developer tools',
+    'best json formatter online',
+    'base64 encoder decoder',
+    'sha256 hash generator online',
+    'online text diff checker',
+    'json validator free',
+    'developer utilities browser',
+    'private json formatter'
+  ],
   openGraph: {
-    title: 'Free Online Developer Utilities – JSON Formatter, Base64, Hashes & Diff | MintTools',
+    title: 'Best Online Developer Tools — JSON Formatter, Base64, Hash & Diff | MintTools',
     description: 'Secure, client-side browser developer tools for JSON formatting, Base64 encoding, SHA/MD5 hashing, and diff inspection.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

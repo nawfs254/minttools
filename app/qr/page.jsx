@@ -1,13 +1,22 @@
-import QRStudioClient from './QRStudioClient';
+﻿import QRStudioClient from './QRStudioClient';
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Online QR Code Generator — Create Free Custom QR Codes | MintTools',
-  description: 'Create customizable high-resolution QR codes with custom colors, sizes, error correction, and instant PNG download. Permanent and free.',
-  keywords: ['qr code generator', 'online qr code generator', 'custom qr code', 'create qr code free', 'color qr code', 'high res qr code'],
+  title: 'Best Free QR Code Generator Online — Custom Logo & Color (Never Expires) | MintTools',
+  description: 'Create custom, permanent QR codes with colors, logos, and high-resolution PNG export. 100% free with no expiration, no account, and zero tracking.',
+  keywords: [
+    'best qr code generator',
+    'best free qr code maker',
+    'qr code generator never expires',
+    'custom qr code with logo',
+    'permanent qr code online',
+    'free qr creator',
+    'generate qr code free online',
+    'wifi qr code generator'
+  ],
   openGraph: {
-    title: 'Online QR Code Generator — Create Free Custom QR Codes | MintTools',
-    description: 'Create customizable high-resolution QR codes with custom colors and instant PNG download.',
+    title: 'Best Free QR Code Generator Online — Custom Logo & Color (Never Expires) | MintTools',
+    description: 'Create custom, permanent QR codes with colors, logos, and high-resolution PNG export. 100% free with no expiration.',
     type: 'website'
   }
 };
@@ -62,3 +71,4 @@ export default function Page() {
     </>
   );
 }
+

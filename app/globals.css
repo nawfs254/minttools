@@ -2098,7 +2098,131 @@ html, body {
   margin: 0;
 }
 
-/* Steps Grid */
+/* Comparison Table */
+.seo-comparison-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.35rem;
+  margin-bottom: 2.25rem;
+}
+
+.seo-comparison-header {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.seo-comparison-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+  letter-spacing: -0.015em;
+}
+
+.seo-comparison-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.seo-comparison-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.seo-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+  min-width: 580px;
+}
+
+.seo-comparison-table th {
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.seo-comparison-table th.th-feature {
+  width: 32%;
+  color: var(--text-main);
+}
+
+.seo-comparison-table th.th-mint {
+  width: 38%;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.seo-comparison-table th.th-others {
+  width: 30%;
+  color: var(--text-dim);
+}
+
+.seo-comparison-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.seo-comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.seo-comparison-table td.td-mint {
+  background: rgba(16, 185, 129, 0.03);
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.seo-comparison-table td.td-others {
+  color: var(--text-muted);
+}
+
+.td-desc {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--text-dim);
+  margin-top: 0.15rem;
+}
+
+.cell-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+.badge-cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(244, 63, 94, 0.15);
+  color: var(--accent-rose);
+  flex-shrink: 0;
+}
+
+  /* Steps Grid */
 .seo-steps-container {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);

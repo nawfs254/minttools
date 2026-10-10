@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Strong Password Generator – Cryptographically Secure & Random | MintTools',
-  description: 'Generate uncrackable, cryptographically secure random passwords, memorable Diceware passphrases, and PINs with entropy analysis. 100% private, zero network requests.',
-  keywords: ['password generator', 'strong password generator', 'random password generator', 'passphrase generator', 'secure password maker', 'diceware generator', 'entropy calculator'],
+  title: 'Best Strong Password Generator Online — Cryptographically Secure & Random | MintTools',
+  description: 'Generate cryptographically secure random passwords, readable Diceware passphrases, and PINs. True entropy using browser Web Crypto API. 100% private.',
+  keywords: [
+    'best password generator online',
+    'strong random password maker',
+    'secure passphrase generator',
+    'diceware generator online',
+    'uncrackable password generator',
+    'random password generator',
+    'crypto password maker',
+    'pin generator online'
+  ],
   openGraph: {
-    title: 'Free Strong Password Generator – Cryptographically Secure & Random | MintTools',
+    title: 'Best Strong Password Generator Online — Cryptographically Secure & Random | MintTools',
     description: 'Create high-entropy passwords, memorably phrased keys, and PINs generated with browser Web Cryptography APIs.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

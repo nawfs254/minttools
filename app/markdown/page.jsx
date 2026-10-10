@@ -2,11 +2,20 @@
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Free Online Markdown Editor – Live Preview & Instant PDF/HTML Export | MintTools',
-  description: 'Fast, distraction-free Markdown editor with side-by-side live preview, GitHub-flavored markdown (GFM) support, and 1-click PDF/HTML export. 100% private.',
-  keywords: ['markdown editor', 'online markdown editor', 'markdown to pdf', 'markdown live preview', 'gfm editor', 'markdown to html', 'free markdown writer'],
+  title: 'Best Free Markdown Editor Online — Live Preview & PDF/HTML Export | MintTools',
+  description: 'Distraction-free Markdown editor with side-by-side live preview, GitHub-flavored markdown (GFM) support, and 1-click PDF/HTML export. 100% private.',
+  keywords: [
+    'best markdown editor online',
+    'markdown live preview online',
+    'markdown to pdf converter',
+    'free online markdown editor',
+    'gfm markdown writer',
+    'markdown to html',
+    'distraction free markdown',
+    'browser markdown editor'
+  ],
   openGraph: {
-    title: 'Free Online Markdown Editor – Live Preview & Instant PDF/HTML Export | MintTools',
+    title: 'Best Free Markdown Editor Online — Live Preview & PDF/HTML Export | MintTools',
     description: 'Distraction-free markdown editor with live synchronized preview and one-click PDF, HTML, and Markdown file export.',
     type: 'website'
   }
@@ -70,3 +79,4 @@ export default function Page() {
     </>
   );
 }
+

@@ -1,13 +1,22 @@
-import QRReaderClient from './QRReaderClient';
+﻿import QRReaderClient from './QRReaderClient';
 import ToolSeoSection from '../components/ToolSeoSection';
 
 export const metadata = {
-  title: 'Online QR Code Scanner & Reader — Camera, Image & Clipboard | MintTools',
-  description: 'Scan and read QR codes instantly from uploaded images, webcam/camera, or clipboard screenshot. 100% private, no server processing.',
-  keywords: ['qr code scanner online', 'qr code reader', 'scan qr code online', 'qr scanner from image', 'webcam qr scanner', 'free qr reader'],
+  title: 'Best Online QR Code Scanner & Reader — Camera & Image Upload | MintTools',
+  description: 'Scan and decode QR codes online using your camera, image upload, or clipboard paste. Fast, private, and 100% client-side with safe link inspection.',
+  keywords: [
+    'best qr scanner online',
+    'scan qr code from image',
+    'online qr reader camera',
+    'read qr code from screenshot',
+    'qr code scanner pc',
+    'browser qr code scanner',
+    'decode qr code online',
+    'safe qr scanner'
+  ],
   openGraph: {
-    title: 'Online QR Code Scanner & Reader — Camera, Image & Clipboard | MintTools',
-    description: 'Scan and read QR codes instantly from uploaded images, webcam/camera, or clipboard.',
+    title: 'Best Online QR Code Scanner & Reader — Camera & Image Upload | MintTools',
+    description: 'Scan and decode QR codes online using your camera, image upload, or clipboard paste. Fast, private, and 100% client-side.',
     type: 'website'
   }
 };
@@ -62,3 +71,4 @@ export default function Page() {
     </>
   );
 }
+
