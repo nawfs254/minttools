@@ -35,6 +35,38 @@ export default function Header() {
       </Link>
 
       <div className="header-actions">
+        <Link
+          href="/about"
+          className="tool-btn"
+          title="About MintTools"
+          style={{
+            textDecoration: 'none',
+            background: pathname === '/about' ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
+            color: pathname === '/about' ? 'var(--accent, #6366f1)' : 'inherit',
+            fontSize: '0.85rem',
+            padding: '0.4rem 0.75rem',
+            borderRadius: 'var(--radius-sm)'
+          }}
+        >
+          <span>About</span>
+        </Link>
+
+        <Link
+          href="/contact"
+          className="tool-btn"
+          title="Contact MintTools Support"
+          style={{
+            textDecoration: 'none',
+            background: pathname === '/contact' ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
+            color: pathname === '/contact' ? '#10b981' : 'inherit',
+            fontSize: '0.85rem',
+            padding: '0.4rem 0.75rem',
+            borderRadius: 'var(--radius-sm)'
+          }}
+        >
+          <span>Contact</span>
+        </Link>
+
         {!isHome && (
           <Link
             href="/"

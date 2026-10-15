@@ -10,7 +10,6 @@ import Script from 'next/script';
 import Link from 'next/link';
 import Header from './components/Header';
 import TopLoader from './components/TopLoader';
-import AdBanner from './components/AdBanner';
 import { ToastProvider } from './components/ToastProvider';
 
 export const metadata = {
@@ -106,12 +105,9 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="app-main">
             {children}
-
-            {/* In-page Static Ad Slot (MintTools Bottom) */}
-            <AdBanner slotId="3065498609" format="horizontal" />
           </main>
 
-                    {/* Clean Minimal Footer */}
+          {/* Clean Minimal Footer */}
           <footer className="app-footer">
             <div className="footer-contacts">
               <a
@@ -155,9 +151,10 @@ export default function RootLayout({ children }) {
 
             <div className="footer-links">
               <Link href="/" className="footer-link">Home</Link>
+              <Link href="/about" className="footer-link">About</Link>
+              <Link href="/contact" className="footer-link">Contact</Link>
               <Link href="/privacy" className="footer-link">Privacy Policy</Link>
               <Link href="/terms" className="footer-link">Terms of Service</Link>
-              <a href="mailto:hello@minttools.net" className="footer-link">Contact</a>
             </div>
             <p style={{ margin: 0, fontSize: '0.8rem', opacity: 0.7 }}>
               &copy; {new Date().getFullYear()} MintTools. 100% Client-Side & Privacy-First. No files stored.

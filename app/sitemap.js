@@ -15,6 +15,8 @@ export default function sitemap() {
     '/password',
     '/converter',
     '/dev',
+    '/about',
+    '/contact',
     '/privacy',
     '/terms',
   ];
@@ -23,6 +25,6 @@ export default function sitemap() {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: route === '' ? 1.0 : (route === '/privacy' || route === '/terms' ? 0.4 : 0.8),
+    priority: route === '' ? 1.0 : (['/about', '/contact'].includes(route) ? 0.7 : (route === '/privacy' || route === '/terms' ? 0.4 : 0.8)),
   }));
 }

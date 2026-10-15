@@ -1,6 +1,24 @@
-﻿'use client';
+'use client';
 import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+
+// Whitelist only content-rich tool pages that contain comprehensive SEO sections,
+// guides, and FAQs. Strictly exclude homepage, legal pages, about, contact, and 404s.
+const ALLOWED_AD_PATHS = new Set([
+  '/pdf',
+  '/pdf-compress',
+  '/pdf-merge',
+  '/image-pdf',
+  '/image',
+  '/exif-cleaner',
+  '/barcode',
+  '/qr',
+  '/qr-reader',
+  '/markdown',
+  '/password',
+  '/converter',
+  '/dev'
+]);
 
 export default function AdBanner({
   slotId = '3065498609',
@@ -11,20 +29,20 @@ export default function AdBanner({
   const pathname = usePathname();
   const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-9295840636296759';
 
-  // Never serve ads on 404/not-found error screens (strict AdSense compliance)
-  const is404 = pathname === '/404' || pathname === '/_not-found';
+  // Strict compliance: only render on verified content-rich tool pages
+  const isAllowedPath = pathname && ALLOWED_AD_PATHS.has(pathname);
 
   useEffect(() => {
-    if (!is404 && clientId && slotId && typeof window !== 'undefined') {
+    if (isAllowedPath && clientId && slotId && typeof window !== 'undefined') {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {
         // Ads will render when Google completes domain approval
       }
     }
-  }, [clientId, slotId, is404]);
+  }, [clientId, slotId, isAllowedPath]);
 
-  if (is404) {
+  if (!isAllowedPath) {
     return null;
   }
 
@@ -34,7 +52,7 @@ export default function AdBanner({
     <div
       className={`ad-container-wrapper ${isRectangle ? 'ad-rectangle' : 'ad-horizontal'} ${className}`}
       style={{
-        margin: '1.5rem auto',
+        margin: '2rem auto',
         maxWidth: isRectangle ? 'min(336px, 100%)' : 'min(768px, 100%)',
         width: '100%',
         textAlign: 'center',
@@ -44,7 +62,7 @@ export default function AdBanner({
       <div className="ad-inner-box" style={{ maxWidth: '100%', overflow: 'hidden' }}>
         <span className="ad-badge-label">Advertisement</span>
 
-        {/* Google AdSense Display Unit: MintTools Bottom */}
+        {/* Google AdSense Display Unit: MintTools Tool In-Content */}
         <ins
           ref={adRef}
           className="adsbygoogle"

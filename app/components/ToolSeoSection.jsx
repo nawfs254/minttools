@@ -1,5 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import { ShieldCheck, Zap, Lock, ChevronDown, CheckCircle2, Check, X } from 'lucide-react';
+import AdBanner from './AdBanner';
 
 export default function ToolSeoSection({
   heading = 'Everything You Need to Know',
@@ -189,6 +190,9 @@ export default function ToolSeoSection({
           </div>
         </div>
       )}
+
+      {/* Google-compliant In-Content Ad: explicitly embedded within rich publisher content */}
+      <AdBanner slotId="3065498609" format="horizontal" />
 
       {/* FAQs Accordions */}
       {faqs.length > 0 && (

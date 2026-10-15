@@ -100,6 +100,6 @@ export function middleware(request) {
 // Apply middleware to all routes except Next.js internal static assets
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.svg|icons.svg|pdf.worker.min.mjs).*)',
+    '/((?!_next/static|_next/image|favicon.ico|favicon.png|favicon.svg|apple-touch-icon.png|icons.svg|pdf.worker.min.mjs|ads.txt|robots.txt|sitemap.xml).*)',
   ],
 };
